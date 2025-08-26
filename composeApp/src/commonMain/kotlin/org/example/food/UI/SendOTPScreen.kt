@@ -41,7 +41,6 @@ fun SendOTPScreen(onPhoneNumberEntered: (String) -> Unit){
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(400.dp) // Adjust height as needed
         ) {
             // Background shape
             Image(

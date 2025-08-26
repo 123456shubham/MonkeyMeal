@@ -35,7 +35,7 @@ import org.jetbrains.compose.resources.painterResource
 fun VerifyOTPScreen(phoneNumber: String,onClick:(String?)-> Unit){
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier.fillMaxWidth().height(400.dp)){
+        Box(modifier = Modifier.fillMaxWidth()){
 
             Image(
                 painter = painterResource(Res.drawable.welcome_top_shape),

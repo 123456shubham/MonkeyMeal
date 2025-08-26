@@ -12,6 +12,7 @@ import org.example.food.UI.CartItemRow
 import org.example.food.UI.CartItemScreen
 import org.example.food.UI.MenuRestaurentsScreen
 import org.example.food.UI.MenuScreen
+import org.example.food.UI.OnBoardingScreen
 import org.example.food.UI.ProductDetails
 import org.example.food.UI.ProfileScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -37,14 +38,39 @@ fun App() {
         ) {
 
             // Splash Screen
+//            composable<AppScreen.SPLASH_SCREEN> {
+//                SplashScreen(modifier = Modifier.fillMaxSize()) {
+//                    navController.navigate(AppScreen.SEND_OTP) {
+//                        popUpTo(AppScreen.SPLASH_SCREEN) { inclusive = true }
+//                        launchSingleTop = true
+//                    }
+//                }
+//            }
+
+            // Splash
             composable<AppScreen.SPLASH_SCREEN> {
-                SplashScreen(modifier = Modifier.fillMaxSize()) {
-                    navController.navigate(AppScreen.SEND_OTP) {
-                        popUpTo(AppScreen.SPLASH_SCREEN) { inclusive = true }
-                        launchSingleTop = true
+                SplashScreen(
+                    modifier = Modifier.fillMaxSize(),
+                    onFinish = {
+                        navController.navigate(AppScreen.ON_BOARDING) {
+                            popUpTo(AppScreen.SPLASH_SCREEN) { inclusive = true }
+                            launchSingleTop = true
+                        }
                     }
-                }
+                )
             }
+            // OnBoarding
+            composable<AppScreen.ON_BOARDING> {
+                OnBoardingScreen(
+                    onFinish = {
+                        navController.navigate(AppScreen.SEND_OTP) {
+                            popUpTo(AppScreen.ON_BOARDING) { inclusive = true }
+                            launchSingleTop = true
+                        }
+                    }
+                )
+            }
+
 
             // Send OTP
             composable<AppScreen.SEND_OTP> {
@@ -98,6 +124,7 @@ fun App() {
                     navController.popBackStack().toString()
                 }
             }
+
 
 
 
