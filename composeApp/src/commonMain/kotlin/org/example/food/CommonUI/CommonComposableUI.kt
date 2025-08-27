@@ -120,6 +120,10 @@ import org.example.food.Model.NavBarItem
 //}
 
 
+fun isValidMobileNumber(number: String): Boolean {
+    return number.length == 10 && number.all { it.isDigit() }
+}
+
 
 // common Text View & storing dynamic value
 @Composable

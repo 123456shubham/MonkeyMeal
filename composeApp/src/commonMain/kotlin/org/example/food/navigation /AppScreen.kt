@@ -34,6 +34,9 @@ sealed interface AppScreen {
     @Serializable
     data class ProductDetails(val name: String): AppScreen
 
+    @Serializable
+    data object Cart : AppScreen
+
 
 
 }

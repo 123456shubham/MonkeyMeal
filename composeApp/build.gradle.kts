@@ -81,9 +81,9 @@ kotlin {
             implementation("com.russhwolf:multiplatform-settings:1.2.0")
 
 
-//            implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc05") // core navigator
-//            implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:1.0.0-rc05") // optional
-//            implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc05") // optional
+            implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc05") // core navigator
+            implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:1.0.0-rc05") // optional
+            implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc05") // optional
 
 
 

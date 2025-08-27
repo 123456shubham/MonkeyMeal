@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fooddelivery.composeapp.generated.resources.Res
 import fooddelivery.composeapp.generated.resources.add
-import fooddelivery.composeapp.generated.resources.cat_3
 import fooddelivery.composeapp.generated.resources.minus
 import org.example.food.CommonUI.CommonTextView
 import org.jetbrains.compose.resources.ExperimentalResourceApi
