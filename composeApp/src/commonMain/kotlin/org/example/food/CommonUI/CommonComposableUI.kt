@@ -125,6 +125,10 @@ fun isValidMobileNumber(number: String): Boolean {
 }
 
 
+fun isValidOTP(otp: String): Boolean {
+    return otp.length==4 && otp.all { it.isDigit() }
+}
+
 // common Text View & storing dynamic value
 @Composable
 fun CommonTextView(

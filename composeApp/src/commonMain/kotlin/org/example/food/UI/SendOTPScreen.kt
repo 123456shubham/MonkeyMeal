@@ -2,7 +2,9 @@ package org.example.food.UI
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -34,7 +36,6 @@ fun SendOTPScreen(onPhoneNumberEntered: (String) -> Unit) {
     val viewModel: AuthViewModel = viewModel()
     var mobileNumber by rememberSaveable { mutableStateOf("") }
     val errorMessage by viewModel.errorMessage.collectAsState()
-
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
@@ -46,6 +47,8 @@ fun SendOTPScreen(onPhoneNumberEntered: (String) -> Unit) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState()) // ✅ makes screen scrollable
+
         ) {
             // Background Shape + Logo
             Box(
@@ -134,7 +137,7 @@ fun SendOTPScreen(onPhoneNumberEntered: (String) -> Unit) {
             )
         }
 
-        // Snackbar at Bottom
+        // Snack bar at Bottom
         SnackbarHost(
             hostState = snackbarHostState,
             modifier = Modifier
