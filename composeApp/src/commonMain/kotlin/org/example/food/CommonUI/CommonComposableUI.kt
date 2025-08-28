@@ -120,6 +120,20 @@ import org.example.food.Model.NavBarItem
 //}
 
 
+fun openCamera(){
+
+}
+
+fun openGallery(){
+
+}
+
+fun openPDF(){
+
+}
+
+
+
 fun isValidMobileNumber(number: String): Boolean {
     return number.length == 10 && number.all { it.isDigit() }
 }
